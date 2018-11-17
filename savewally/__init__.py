@@ -30,6 +30,11 @@ def find_nearest(array, value):
    return (np.abs(array - value)).argmin()
 
 
+def RGB2Lum(patch):
+    '''Convert a collection of rgb array to grey using standard luminence equation'''
+    return patch[:,:,0]*.2126 + patch[:,:,1]*.7152 + patch[:,:,2]*.0722
+
+
 def non_white(mask_array, level=8):
     """
     Returns list of paths to images with any non white values
