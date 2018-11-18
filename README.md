@@ -3,7 +3,8 @@
 Geoscience Hackathon in Aberdeen (16-18/11/2018)
 #
 We used a dataset of around 3000 geolocated seals from a Scottish island to train 
-a Linear Support Vector classifier (sklearn.svm.LinearSVC).
+a Linear Support Vector classifier (sklearn.svm.LinearSVC). The quickly trained classifier
+can then be used to convolve across a given images and highlight the location of seals:
 
 ![](test_image_comp.jpg)
 
