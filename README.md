@@ -5,7 +5,7 @@ Geoscience Hackathon in Aberdeen (16-18/11/2018)
 We used a dataset of around 3000 geolocated seals from a Scottish island to train 
 a Linear Support Vector classifier (sklearn.svm.LinearSVC).
 
-![](test_image_id.PNG)
+![](test_image_comp.jpg)
 
 #
 ### References
