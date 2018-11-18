@@ -37,7 +37,7 @@ def RGB2Lum(patch):
 
 def non_white(mask_array, level=8):
     """
-    Returns list of paths to images with any non white values
+    Returns list of image file paths containing any non white values
     """
     image_paths = []
     for i in range(256):
