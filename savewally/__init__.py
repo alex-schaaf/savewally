@@ -48,3 +48,23 @@ def non_white(mask_array, level=8):
                 continue
             image_paths.append(image_path)
     return image_paths
+
+
+def overlap_area(seal_box, patch_box, dx, dy):
+    """
+    takes two tuples that describe the extents of two boxes and returns the percentage overlap
+    """
+    a = seal_box
+    b = patch_box
+
+    if a[0] >= b[0]:
+        width = b[2] - a[0]
+    else:
+        width = a[2] - b[0]
+
+    if a[1] >= b[1]:
+        height = b[3] - a[1]
+    else:
+        height = a[3] - b[1]
+
+    return (width * height)/(dx * dy * 4)
