@@ -1,4 +1,8 @@
 import numpy as np
+import tqdm
+import os
+import matplotlib.pyplot as plt
+
 maxX = 46883
 maxY = 63512
 SizeTile = 256
@@ -68,3 +72,12 @@ def overlap_area(seal_box, patch_box, dx, dy):
         height = a[3] - b[1]
 
     return (width * height)/(dx * dy * 4)
+
+
+def read_patches(fp, step=1):
+    patches = []
+    for patch in tqdm.tqdm(os.listdir(fp)[::step]):
+        patch = plt.imread(fp + patch)
+        if patch.shape == (50,50,3):
+            patches.append(patch)
+    return np.array(patches)
