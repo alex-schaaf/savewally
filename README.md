@@ -8,6 +8,8 @@ can then be used to convolve across a given images and highlight the location of
 
 ![](images/test_image_comp.jpg)
 
+`savewally/notebooks/03_learning_keras.ipynb` contains a working prototype Convolutional Neural Networks using Keras with Tensorflow.
+
 #
 ### References
 
